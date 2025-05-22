@@ -1,17 +1,16 @@
-#ifndef ITEM.HPP
-#define ITEM.HPP
+#ifndef ITEM_HPP
+#define ITEM_HPP
 
-#include <iostream>
+#include <string>
 
 class Item
 {
     public:
-
-      virtual void setPrice()= 0 ;
-       virtual void setAmount()= 0 ;
-       virtual void setName()= 0 ;
-       virtual void setPrice(double)=0 ;
-
+    
+        virtual void setPrice(double price) = 0;
+        virtual void setAmount(double amount) = 0;
+        virtual void setName(const std::string &name) = 0;
+        virtual ~Item() {}
 };
 
 #endif
