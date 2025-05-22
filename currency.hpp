@@ -1,20 +1,16 @@
 #ifndef CURRENCY_HPP
 #define CURRENCY_HPP
 
+#include <iostream>
+#include <stdexcept>
 
-#include<iostream>
+class Currency {
+public:
+    virtual double Change() = 0;
+    virtual ~Currency() {}
+protected:
+    double money;
+    char l;
+};
 
-
- class Currency
- {
-  public:
-  
-   virtual double Change()=0;
-   protected:
-
-   double money;
-   
-
- };
-
- #endif
+#endif
